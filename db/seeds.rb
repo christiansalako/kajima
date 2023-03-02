@@ -38,7 +38,7 @@ Booking.create!([
     start_time: 2.days.from_now.change(hour: 12),
     end_time:   2.days.from_now.change(hour: 12),
     user:       user,
-    host:       host
+    host:       host,
     state:      'cancelled'
   }
 ])
