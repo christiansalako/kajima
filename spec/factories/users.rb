@@ -8,9 +8,10 @@ FactoryBot.define do
     mobile { Faker::PhoneNumber.phone_number }
     password { 'password' }
     password_confirmation { 'password' }
+    approved { true }
 
-    trait :approved do
-      approved { true }
+    trait :unapproved do
+      approved { false }
     end
   end
 end
