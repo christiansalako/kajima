@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_07_095906) do
+ActiveRecord::Schema.define(version: 2023_02_21_201829) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer "user_id"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2020_09_07_095906) do
     t.string "state"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "aasm_state"
     t.index ["host_id"], name: "index_bookings_on_host_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
